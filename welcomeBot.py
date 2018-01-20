@@ -26,6 +26,7 @@ while True:
                 else:
                     #We have a title so it's a fresh posts so let's welcome them
                     post.reply("Welcome to Steemit!", "", "<your steemit username>")
+                    print("... welcomed user.")
 
             else:
                 #no introduceyourself tag so skip the post
@@ -33,4 +34,5 @@ while True:
 
     #Catch any unexpected exceptions
     except Exception as e:
+        print("... NOT welcomed because:")
         print("Error: "+str(e))
