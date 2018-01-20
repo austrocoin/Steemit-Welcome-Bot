@@ -3,7 +3,7 @@ from steem.blockchain import Blockchain
 from steem.post import Post
 
 # Define your username
-steemuser = yourusername
+steemuser = <your steem user account>
 #create steem instance and pass it your private posting key
 s = Steem(keys = ["<your private posting key>"])
 #create blockchain instance
