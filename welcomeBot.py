@@ -45,3 +45,4 @@ while True:
     except Exception as e:
         print("... NOT welcomed because:")
         print("Error: "+str(e))
+        continue
