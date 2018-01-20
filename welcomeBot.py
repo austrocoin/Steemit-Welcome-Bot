@@ -12,8 +12,12 @@ b = Blockchain()
 # Define your tag or multiple ones
 keywords = ["introduceyourself", "adventure"]
 
-# Do you want to vote on post? Fill out voting power, 0 is voting disabled.
-# voting = ["0"]
+# Do you want to vote on post too? Fill out user & voting weight (power).
+# voting = 0
+# steemuser = yourusername
+# power = 30
+
+# post.upvote(weight=upvote_pct, voter=steemuser)
 
 
 while True:
