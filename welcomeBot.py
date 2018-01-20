@@ -41,11 +41,13 @@ while True:
                     post.reply("Welcome to Steemit!", "", "@<your steemit username>")
                     print("... welcomed user ")
                     
-                        #When voting is activated we vote on that post too.
+                        #When voting is activated we vote on that post too
                         if voting == "1":
                         post.upvote(weight=upvote_pct, voter=steemuser)
                         print("... & voted on post.")
+                        
                         else:
+                            #When not - we skip voting
                             pass
                         
             else:
