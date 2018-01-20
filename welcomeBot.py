@@ -7,6 +7,15 @@ s = Steem(keys = ["<your private posting key>"])
 #create blockchain instance
 b = Blockchain()
 
+
+
+# Define your tag or multiple ones
+# keyword = ["introduceyourself", "adventure"]
+
+# Do you want to vote on post? Fill out voting power, 0 is voting disabled.
+# voting = ["0"]
+
+
 while True:
     try:
         # stream the blockchain
