@@ -2,8 +2,6 @@ from steem import Steem
 from steem.blockchain import Blockchain
 from steem.post import Post
 
-# Define your username
-steemuser = <your steem user account>
 #create steem instance and pass it your private posting key
 s = Steem(keys = ["<your private posting key>"])
 #create blockchain instance
@@ -12,6 +10,8 @@ b = Blockchain()
 # Define your tag or multiple ones
 keywords = ["introduceyourself", "adventure"]
 
+# Define your username
+steemuser = <your steem user account>
 # Do you want to vote on post too? Fill out user & voting weight (power).
 voting = 1
 power = 100
