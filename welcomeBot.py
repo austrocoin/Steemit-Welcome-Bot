@@ -7,17 +7,17 @@ s = Steem(keys = ["<your private posting key>"])
 #create blockchain instance
 b = Blockchain()
 
-
+# Define your username
+steemuser = yourusername
 
 # Define your tag or multiple ones
 keywords = ["introduceyourself", "adventure"]
 
 # Do you want to vote on post too? Fill out user & voting weight (power).
-# voting = 0
-# steemuser = yourusername
-# power = 30
+voting = 1
+power = 100
 
-# post.upvote(weight=upvote_pct, voter=steemuser)
+
 
 
 while True:
@@ -39,8 +39,15 @@ while True:
                 else:
                     #We have a title so it's a fresh posts so let's welcome them
                     post.reply("Welcome to Steemit!", "", "@<your steemit username>")
-                    print("... welcomed user @.")
-
+                    print("... welcomed user ")
+                    
+                        #When voting is activated we vote on that post too.
+                        if voting == "1":
+                        post.upvote(weight=upvote_pct, voter=steemuser)
+                        print("... & voted on post.")
+                        else:
+                            pass
+                        
             else:
                 #no introduceyourself tag so skip the post
                 pass
