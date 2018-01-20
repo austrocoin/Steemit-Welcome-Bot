@@ -10,7 +10,7 @@ b = Blockchain()
 
 
 # Define your tag or multiple ones
-# keyword = ["introduceyourself", "adventure"]
+keywords = ["introduceyourself", "adventure"]
 
 # Do you want to vote on post? Fill out voting power, 0 is voting disabled.
 # voting = ["0"]
@@ -24,8 +24,8 @@ while True:
         for post in stream:
             # get all the tags of the post
             postTags = post.json_metadata.get('tags', [])
-            # check if "introduceyourself" is in the list of tags. You can add more tags
-            if "introduceyourself" in postTags:
+            # check if one of predefined tags is in the list of tags. You can add more tags
+            if keywords in postTags:
                 title = post.title
                 # check if the post/comment has a title
                 if title == "":
@@ -34,8 +34,8 @@ while True:
 
                 else:
                     #We have a title so it's a fresh posts so let's welcome them
-                    post.reply("Welcome to Steemit!", "", "<your steemit username>")
-                    print("... welcomed user.")
+                    post.reply("Welcome to Steemit!", "", "@<your steemit username>")
+                    print("... welcomed user @.")
 
             else:
                 #no introduceyourself tag so skip the post
