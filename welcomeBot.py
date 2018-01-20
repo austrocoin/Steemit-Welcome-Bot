@@ -37,7 +37,7 @@ while True:
 
                 else:
                     #We have a title so it's a fresh posts so let's welcome them
-                    post.reply("Welcome to Steemit!", "", "Yours @steemuser")
+                    post.reply("Welcome to Steemit {post['author']}!", "", "Yours @steemuser")
                     print("... welcomed user ")
                     
                         #When voting is activated we vote on that post too
